@@ -129,8 +129,4 @@ Hiding a button in non-mobile view
         text-align: center;
         color: rgb(187, 187, 187);
     }
-
-    #navButton > p {
-        flex-grow: 8;
-    }
 }
