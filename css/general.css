@@ -133,6 +133,7 @@ Fill all the width of parent. Use in pair with .row > .col-? parents for set req
 ol {
 	list-style: decimal;
 	margin: 0 0 2em 0;
+	list-style-position: inside;
 	padding-left: 1.25em;
 }
 
