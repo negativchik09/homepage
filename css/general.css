@@ -18,7 +18,7 @@ html {
 	overflow-x: hidden;
 }
 
-/*Main settings of page*/
+/* Main settings of page */
 
 body {
 	background: #f5f5f5;
@@ -43,7 +43,7 @@ a:hover {
 	border-bottom-color: transparent;
 }
 
-/*Text sizes and colors*/
+/* Text sizes and colors */
 
 p {
 	margin: 0 0 1em 0;
@@ -81,14 +81,14 @@ h3 {
 	padding: 0;
 }
 
-/*Page wrapper, sets the position of main infomation*/
+/* Page wrapper, sets the position of main infomation */
 
 .container {
 	margin: 2em calc(5% - 2em) 0 calc(25% + 2em);
 	width: 70%;
 }
 
-/*Container which looks like a tile*/
+/* Container which looks like a tile */
 
 .box {
 	background: #fff;
@@ -128,7 +128,7 @@ Fill all the width of parent. Use in pair with .row > .col-? parents for set req
 	z-index: 1;
 }
 
-/*Lists*/
+/* Lists */
 
 ol {
 	list-style: decimal;
@@ -183,8 +183,7 @@ ul.alt li:first-child {
 		font-size: 13pt;
 	}
 
-	.container
-	{
+	.container {
 		margin: 2em calc(10% - 2em) 0 calc(30% + 2em);
 		width: 60%;
 	}
