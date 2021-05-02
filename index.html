@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="uk">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <title>Résumé</title>
     <link rel="stylesheet" href="css/main.css"/>
     <link type="image/png" rel="icon" href="img/favicon.png">
     <meta name="description" content="Резюме Шерлока Холмса">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <div id="navButton">
+      <i class="fas fa-angle-up"></i>
+      <p>Содержание</p>
+      <i class="fas fa-angle-up"></i>
+    </div>
     <div id="navBar">
       <nav>
         <a href="#" class="link main">Шерлок Холмс</a>
@@ -16,6 +22,34 @@
         <a href="#" class="link depth-2">!</a>
       </nav>
     </div>
+    <div class="container">
+      <div class="box">
         ― Hello World! &#x1F609;
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.scrollex.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#navButton').click( function(){
+          if ($(window).width() < 841) {
+            if ($('#navBar').hasClass('active'))
+            {
+              $('#navBar').removeClass('active');
+              return;
+            }
+            $('#navBar').addClass('active');
+        }});
+        $('#navBar a').click( function(){
+          if ($(window).width() < 841) {
+            $('#navBar').removeClass('active');
+        }});
+      });
+      $("body").on('click', '[href*="#"]', function(e){
+        var fixed_offset = 100;
+        $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+        e.preventDefault();
+      });
+    </script>
   </body>
 </html>
