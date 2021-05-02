@@ -1,4 +1,4 @@
-/*Panel position and properties*/
+/* Panel position and properties */
 
 #navBar {
     position: fixed;
@@ -16,7 +16,7 @@
     width: 100%;
 }
 
-/*Navigation menu item*/
+/* Navigation menu item */
 
 #navBar .link {
     display: block;
@@ -36,7 +36,7 @@
     border-top: 0;
 }
 
-/*Header of navbar*/
+/* Header of navbar */
 
 #navBar .link.main {
     font-weight: 500;
@@ -48,7 +48,7 @@
 	letter-spacing: -0.035em;
 }
 
-/*Extra levels of list*/
+/* Extra levels of list */
 
 #navBar .link.depth-1 {
     padding-left: 2em;
@@ -62,7 +62,7 @@
     padding-left: 4em;
 }
 
-/*Some visual effects*/
+/* Some visual effects */
 
 #navBar .link.main:hover {
     color: rgb(187, 187, 187);
