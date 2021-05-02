@@ -13,24 +13,24 @@ nav {
 	display: block;
 }
 
-ol, ul {
-	list-style: none;
-}
-
 html {
 	box-sizing: border-box;
+	overflow-x: hidden;
 }
+
+/*Main settings of page*/
 
 body {
 	background: #f5f5f5;
     color: #616161;
 	font-family: "Source Sans Pro", sans-serif;
-	font-size: 16pt;
+	font-size: 18pt;
 	font-weight: 300;
 	line-height: 1.65em;
 	letter-spacing: -0.015em;
     line-height: 1;
 	text-align: justify;
+	overflow-x: hidden;
 }
 
 a {
@@ -43,6 +43,8 @@ a {
 a:hover {
 	border-bottom-color: transparent;
 }
+
+/*Text sizes and colors*/
 
 p {
 	margin: 0 0 2em 0;
@@ -73,13 +75,14 @@ h4 {
 	letter-spacing: 0;
 }
 
+/*Page wrapper, sets the position of main infomation*/
+
 .container {
-	margin-top: 2em;
-	margin-left: calc(30% + 2em);
-	margin-bottom: 0;
-	margin-right: calc(10% - 2em);
-	width: 60%;
+	margin: 2em calc(5% - 2em) 0 calc(25% + 2em);
+	width: 70%;
 }
+
+/*Container which looks like a tile*/
 
 .box {
 	background: #fff;
@@ -97,6 +100,11 @@ h4 {
 	text-align: center;
 }
 
+/*
+Image
+Fill all the width of parent. Use in pair with .row > .col-? parents for set required width
+*/
+
 .image {
 	display: block;
 	margin: 0 0 2em 0;
@@ -111,6 +119,8 @@ h4 {
 	width: 100%;
 	border-radius: 6px;
 }
+
+/*Lists*/
 
 ol {
 	list-style: decimal;
@@ -147,24 +157,32 @@ ul.alt li:first-child {
 	padding-top: 0;
 }
 
+
+
 @media screen and (max-width: 1680px) {
 
 	body {
-		font-size: 13pt;
+		font-size: 15pt;
 	}
 }
 
 @media screen and (max-width: 1280px) {
 
 	body {
-		font-size: 11pt;
+		font-size: 13pt;
+	}
+
+	.container
+	{
+		margin: 2em calc(10% - 2em) 0 calc(30% + 2em);
+		width: 60%;
 	}
 }
 
 @media screen and (max-width: 840px) {
 
 	body {
-		overflow-x: hidden;
+		font-size: 11pt;
 	}
 
 	h2 br, h3 br, h4 br, h5 br, h6 br {

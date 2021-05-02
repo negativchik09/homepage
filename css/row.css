@@ -1,3 +1,5 @@
+/*Wrapper that makes easier setting the width of the elements*/
+
 .row {
 	display: flex;
 	flex-wrap: wrap;
@@ -12,6 +14,20 @@
     padding: 0 0 0 2em;
 }
 
+/*
+Classes below can be combined like this:
+<div class="col-7 off-5 .col-12-wide"></div>
+If screen size more than 1680px (about this - later), 
+element will occupy 7/12 of width and will have 5/12 width colomns offset leftside, 
+if less - 12/12 or 100% of width
+*/
+
+/*
+Set of classes for description a width of element
+col-x, where x - number of shares 12 that the element will occupy
+off-x, where x - number of shares 12 that will be ckipped from left side of previous element or border of row
+*/
+/*Ultra-wide screen (>1680px)*/
 .row > .col-1 {
 	width: 8.33333%;
 }
@@ -107,6 +123,10 @@
 .row > .off-12 {
 	margin-left: 100%;
 }
+
+/*
+Wide screen (<1680px and >1280px)
+*/
 
 @media screen and (max-width: 1680px) {
 
@@ -207,6 +227,10 @@
 	}
 }
 
+/*
+Normal screen (<1280px and >980px)
+*/
+
 @media screen and (max-width: 1280px) {
 
 	.row > .col-1-normal {
@@ -305,6 +329,8 @@
 		margin-left: 100%;
 	}
 }
+
+/*Tablet (<980px and >840px)*/
 
 @media screen and (max-width: 980px) {
 
@@ -405,6 +431,8 @@
 	}
 }
 
+/*Big telephone (<840px and >736px)*/
+
 @media screen and (max-width: 840px) {
 
 	.row > .col-1-narrower {
@@ -504,6 +532,8 @@
 	}
 }
 
+/*Mobile (<736px)*/
+
 @media screen and (max-width: 736px) {
 
 	.row > .col-1-mobile {
@@ -599,105 +629,6 @@
 	}
 
 	.row > .off-12-mobile {
-		margin-left: 100%;
-	}
-}
-
-@media screen and (max-width: 480px) {
-
-	.row > .col-1-mobilep {
-		width: 8.33333%;
-	}
-
-	.row > .off-1-mobilep {
-		margin-left: 8.33333%;
-	}
-
-	.row > .col-2-mobilep {
-		width: 16.66667%;
-	}
-
-	.row > .off-2-mobilep {
-		margin-left: 16.66667%;
-	}
-
-	.row > .col-3-mobilep {
-		width: 25%;
-	}
-
-	.row > .off-3-mobilep {
-		margin-left: 25%;
-	}
-
-	.row > .col-4-mobilep {
-		width: 33.33333%;
-	}
-
-	.row > .off-4-mobilep {
-		margin-left: 33.33333%;
-	}
-
-	.row > .col-5-mobilep {
-		width: 41.66667%;
-	}
-
-	.row > .off-5-mobilep {
-		margin-left: 41.66667%;
-	}
-
-	.row > .col-6-mobilep {
-		width: 50%;
-	}
-
-	.row > .off-6-mobilep {
-		margin-left: 50%;
-	}
-
-	.row > .col-7-mobilep {
-		width: 58.33333%;
-	}
-
-	.row > .off-7-mobilep {
-		margin-left: 58.33333%;
-	}
-
-	.row > .col-8-mobilep {
-		width: 66.66667%;
-	}
-
-	.row > .off-8-mobilep {
-		margin-left: 66.66667%;
-	}
-
-	.row > .col-9-mobilep {
-		width: 75%;
-	}
-
-	.row > .off-9-mobilep {
-		margin-left: 75%;
-	}
-
-	.row > .col-10-mobilep {
-		width: 83.33333%;
-	}
-
-	.row > .off-10-mobilep {
-		margin-left: 83.33333%;
-	}
-
-	.row > .col-11-mobilep {
-		width: 91.66667%;
-	}
-
-	.row > .off-11-mobilep {
-		margin-left: 91.66667%;
-	}
-
-	.row > .col-12-mobilep {
-		width: 100%;
-	}
-
-	.row > .off-12-mobilep {
 		margin-left: 100%;
 	}
 }

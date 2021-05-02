@@ -5,15 +5,17 @@
     <title>Résumé</title>
     <link rel="stylesheet" href="css/main.css"/>
     <link type="image/png" rel="icon" href="img/favicon.png">
-    <meta name="description" content="Резюме Шерлока Холмса">
+    <meta name="description" content="Резюме Шерлока Холмса - першого і єдиного у своєму роді 'консультуючого' детектива">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <!--Mobile view button-->
     <div id="navButton">
       <i class="fas fa-angle-up"></i>
       <p>Содержание</p>
       <i class="fas fa-angle-up"></i>
     </div>
+    <!--Navigation panel-->
     <div id="navBar">
       <nav>
         <a href="#" class="link main">Шерлок Холмс</a>
@@ -22,6 +24,7 @@
         <a href="#" class="link depth-2">!</a>
       </nav>
     </div>
+    <!--Content of a page-->
     <div class="container">
       <div class="box">
         ― Hello World! &#x1F609;
@@ -32,6 +35,7 @@
     <script>
       $(document).ready(function(){
         $('#navButton').click( function(){
+          // Mobile view button script
           if ($(window).width() < 841) {
             if ($('#navBar').hasClass('active'))
             {
@@ -40,11 +44,13 @@
             }
             $('#navBar').addClass('active');
         }});
+        // Closing navbar in mobile view when clicking the link
         $('#navBar a').click( function(){
           if ($(window).width() < 841) {
             $('#navBar').removeClass('active');
         }});
       });
+      // Smooth scroll when clicking the link
       $("body").on('click', '[href*="#"]', function(e){
         var fixed_offset = 100;
         $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
