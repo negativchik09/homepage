@@ -1,5 +1,5 @@
-@import url("fontawesome-all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
-@import url("navbar.css");
-@import url("general.css");
-@import url("row.css");
+@import url("fontawesome-all.min.css"); /*Different icons*/
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic"); /*Import font "Source Sans Pro"*/
+@import url("general.css"); /*Main settings, like fonts, containers, colors, etc. */
+@import url("navbar.css"); /*Navigation bar styles*/
+@import url("row.css"); /*Container for addaptive output*/

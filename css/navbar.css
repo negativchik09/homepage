@@ -1,6 +1,4 @@
-html, body {
-    overflow-x: hidden;
-}
+/*Panel position and properties*/
 
 #navBar {
     position: fixed;
@@ -11,11 +9,14 @@ html, body {
     width: 20%;
     padding: 2em;
     background-color: rgb(50, 50, 50);
+    z-index: 10000;
 }
 
 #navBar nav {
     width: 100%;
 }
+
+/*Navigation menu item*/
 
 #navBar .link {
     display: block;
@@ -29,9 +30,14 @@ html, body {
     font-weight: 400;
 }
 
+#navBar .link:first-child {
+    border-top: 0;
+}
+
+/*Header of navbar*/
+
 #navBar .link.main {
     font-weight: 500;
-    border-top: 0;
     color: rgb(255, 255, 255);
     font-size: 2em;
     padding: 1em 0;
@@ -40,10 +46,7 @@ html, body {
 	letter-spacing: -0.035em;
 }
 
-#navBar .link.main:hover {
-    color: rgb(187, 187, 187);
-    font-size: 2.3em;
-}
+/*Extra levels of list*/
 
 #navBar .link.depth-1 {
     padding-left: 2em;
@@ -57,6 +60,13 @@ html, body {
     padding-left: 4em;
 }
 
+/*Some visual effects*/
+
+#navBar .link.main:hover {
+    color: rgb(187, 187, 187);
+    font-size: 2.3em;
+}
+
 #navBar .link:hover {
     color: rgb(255, 255, 255);
     font-weight: 500;
@@ -68,6 +78,10 @@ html, body {
     color: #616161;
 }
 
+/*
+Hiding a button in non-mobile view
+*/
+
 #navButton {
     display: none;
 }
@@ -75,19 +89,11 @@ html, body {
 @media screen and (max-width: 1280px) {
 
     #navBar .link.main {
-        font-weight: 500;
-        border-top: 0;
-        color: rgb(255, 255, 255);
-        font-size: 1.8em;
-        padding: 1em 0;
-        line-height: 1.5em;
-        height: 1.5em;
-        letter-spacing: -0.035em;
+        font-size: 1.6em;
     }
     
     #navBar .link.main:hover {
-        color: rgb(187, 187, 187);
-        font-size: 2em;
+        font-size: 1.7em;
     }
 }
 

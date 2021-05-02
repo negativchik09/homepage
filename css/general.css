@@ -13,24 +13,23 @@ nav {
 	display: block;
 }
 
-ol, ul {
-	list-style: none;
-}
-
 html {
 	box-sizing: border-box;
+	overflow-x: hidden;
 }
+
+/*Main settings of page*/
 
 body {
 	background: #f5f5f5;
     color: #616161;
 	font-family: "Source Sans Pro", sans-serif;
-	font-size: 16pt;
+	font-size: 18pt;
 	font-weight: 300;
-	line-height: 1.65em;
+	line-height: 1.35em;
 	letter-spacing: -0.015em;
-    line-height: 1;
 	text-align: justify;
+	overflow-x: hidden;
 }
 
 a {
@@ -44,8 +43,10 @@ a:hover {
 	border-bottom-color: transparent;
 }
 
+/*Text sizes and colors*/
+
 p {
-	margin: 0 0 2em 0;
+	margin: 0 0 1em 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -55,38 +56,46 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 0.5em 0;
 }
 
-h2 {
-	font-size: 2.25em;
+h1 {
+	font-size: 1.6em;
+	font-weight: 400;
 	line-height: 1.5em;
-	letter-spacing: -0.035em;
+	letter-spacing: -0.04em;
+	text-align: center;
+	padding: 0;
+}
+
+h2 {
+	font-size: 1.35em;
+	line-height: 1.3em;
+	letter-spacing: -0.025em;
+	text-align: center;
+	padding: 0;
 }
 
 h3 {
-	font-size: 1.75em;
-	line-height: 1.5em;
-	letter-spacing: -0.025em;
+	font-size: 1.1em;
+	line-height: 1.1em;
+	letter-spacing: 0;
+	text-align: center;
+	padding: 0;
 }
 
-h4 {
-	font-size: 1.1em;
-	line-height: 1.5em;
-	letter-spacing: 0;
-}
+/*Page wrapper, sets the position of main infomation*/
 
 .container {
-	margin-top: 2em;
-	margin-left: calc(30% + 2em);
-	margin-bottom: 0;
-	margin-right: calc(10% - 2em);
-	width: 60%;
+	margin: 2em calc(5% - 2em) 0 calc(25% + 2em);
+	width: 70%;
 }
+
+/*Container which looks like a tile*/
 
 .box {
 	background: #fff;
 	border-radius: 6px;
 	box-shadow: 0 2px 0 0 #e5e5e5;
 	margin: 0 0 2em 0;
-	padding: 3em;
+	padding: 2em;
 }
 
 .box > :last-child {
@@ -97,6 +106,11 @@ h4 {
 	text-align: center;
 }
 
+/*
+Image
+Fill all the width of parent. Use in pair with .row > .col-? parents for set required width
+*/
+
 .image {
 	display: block;
 	margin: 0 0 2em 0;
@@ -104,13 +118,17 @@ h4 {
 	border-radius: 6px;
 	border: 0;
 	position: relative;
+	z-index: 1;
 }
 
 .image img {
 	display: block;
 	width: 100%;
 	border-radius: 6px;
+	z-index: 1;
 }
+
+/*Lists*/
 
 ol {
 	list-style: decimal;
@@ -124,6 +142,7 @@ ol li {
 
 ul {
 	list-style: disc;
+	list-style-position: inside;
 	margin: 0 0 2em 0;
 	padding-left: 1em;
 }
@@ -134,6 +153,7 @@ ul li {
 
 ul.alt {
 	list-style: none;
+	list-style-position: inside;
 	padding-left: 0;
 }
 
@@ -147,24 +167,32 @@ ul.alt li:first-child {
 	padding-top: 0;
 }
 
+
+
 @media screen and (max-width: 1680px) {
 
 	body {
-		font-size: 13pt;
+		font-size: 15pt;
 	}
 }
 
 @media screen and (max-width: 1280px) {
 
 	body {
-		font-size: 11pt;
+		font-size: 13pt;
+	}
+
+	.container
+	{
+		margin: 2em calc(10% - 2em) 0 calc(30% + 2em);
+		width: 60%;
 	}
 }
 
 @media screen and (max-width: 840px) {
 
 	body {
-		overflow-x: hidden;
+		font-size: 11pt;
 	}
 
 	h2 br, h3 br, h4 br, h5 br, h6 br {
@@ -178,7 +206,7 @@ ul.alt li:first-child {
 	}
 
 	.box {
-		padding: 3em 2em;
+		padding: 2em 1.5em;
 	}
 }
 
@@ -205,6 +233,6 @@ ul.alt li:first-child {
 	.box {
 		margin: 1em;
 		overflow-x: hidden;
-		padding: 2em 2em !important;
+		padding: 1.5em 1.5em !important;
 	}
 }
