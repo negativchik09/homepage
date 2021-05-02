@@ -79,22 +79,6 @@ h4 {
 	width: 60em;
 }
 
-@media screen and (max-width: 840px) {
-
-	.container {
-		width: 100% !important;
-	}
-
-}
-
-@media screen and (max-width: 736px) {
-
-	.container {
-		max-width: 100%;
-	}
-
-}
-
 .box {
 	background: #fff;
 	border-radius: 6px;
@@ -159,4 +143,64 @@ ul.alt li {
 ul.alt li:first-child {
 	border-top: 0;
 	padding-top: 0;
+}
+
+@media screen and (max-width: 1680px) {
+
+	body {
+		font-size: 13pt;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+
+	body {
+		font-size: 11pt;
+	}
+}
+
+@media screen and (max-width: 840px) {
+
+	body {
+		overflow-x: hidden;
+	}
+
+	h2 br, h3 br, h4 br, h5 br, h6 br {
+		display: none;
+	}
+
+	.container {
+		width: 100% !important;
+	}
+
+	.box {
+		padding: 3em 2em;
+	}
+}
+
+@media screen and (max-width: 736px) {
+
+	h2 {
+		font-size: 1.75em;
+		line-height: 1.35em;
+		letter-spacing: -0.025em;
+	}
+
+	h3 {
+		font-size: 1.5em;
+	}
+
+	h4 {
+		font-size: 1em;
+	}
+
+	.container {
+		max-width: 100%;
+	}
+
+	.box {
+		margin: 1em;
+		overflow-x: hidden;
+		padding: 2em 2em !important;
+	}
 }
