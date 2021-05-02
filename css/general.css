@@ -74,9 +74,11 @@ h4 {
 }
 
 .container {
-	margin: 0 auto;
-	max-width: calc(100% - 5em);
-	width: 60em;
+	margin-top: 2em;
+	margin-left: calc(30% + 2em);
+	margin-bottom: 0;
+	margin-right: calc(10% - 2em);
+	width: 60%;
 }
 
 .box {
@@ -171,6 +173,8 @@ ul.alt li:first-child {
 
 	.container {
 		width: 100% !important;
+		margin: 2em 0;
+		padding-bottom: 5em;
 	}
 
 	.box {
